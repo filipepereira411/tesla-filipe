@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop is Down - Filipe Pereira</title>
+    <style>
+        :root {
+            --neon-red: #ff3333;
+            --neon-blue: #00f3ff;
+            --bg-color: #0a0a0c;
+            --panel-color: #121216;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--panel-color);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .system-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .status-alert {
+            color: var(--neon-red);
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--neon-blue);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .lyrics-box {
+            background: #050507;
+            padding: 20px;
+            border-left: 3px solid var(--neon-red);
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .lyrics-line {
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .highlight-red {
+            color: var(--neon-red);
+            font-weight: bold;
+        }
+
+        .highlight-blue {
+            color: var(--neon-blue);
+        }
+
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Animação de Piscar para o Erro */
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #555;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Estado do Sistema -->
+    <div class="system-status">
+        <div>LOG_FILE: tesla_error.log</div>
+        <div class="status-alert">[LOOP_CRASHED]</div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <h1>System Failure //</h1>
+    
+    <!-- Caixa com a Letra e Conceito -->
+    <div class="lyrics-box">
+        <div class="lyrics-line">
+            <span class="highlight-blue">&gt; ERR_CODE:</span> 
+            <span class="glitch-text">"Loop is down, HTML guloso"</span>
+        </div>
+        <div class="lyrics-line">
+            <span class="highlight-red">&gt; CONFESSION:</span> 
+            "Eu é que sou guloso."
+        </div>
+        <div class="lyrics-line" style="color: #666; font-size: 0.95rem; margin-top: 25px;">
+            // Chora dentro desse Tesla;<br>
+            // O teu coração (ou lá para o que for isso!)
+        </div>
+    </div>
+
+    <!-- Rodapé Técnico -->
+    <footer>
+        &copy; 2026 Filipe Pereira &bull; SoundCloud Release &bull; Memory Overload
+    </footer>
+</div>
+
+</body>
+</html>
